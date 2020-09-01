@@ -14,7 +14,13 @@ namespace CanIBuyBeer
             bool canIBuyBeer = false;
             if(legg == "J" && promille < 1.0m)
             {
-                if(location == "krogen" && age > 17)
+
+                if (location == "skola" && age > 15)
+                {
+                    canIBuyBeer = true;
+                }
+
+                if (location == "krogen" && age > 17)
                 {
                     canIBuyBeer = true;
                 }
@@ -29,6 +35,8 @@ namespace CanIBuyBeer
         }
         static void Main(string[] args)
         {
+            Console.WriteLine("Superdupermegaauber 1.01");
+
             Console.Write("Hur gammal är du? ");
             int age = Convert.ToInt32(Console.ReadLine());
             Console.Write("Location: ");
